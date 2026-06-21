@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Lato } from "next/font/google";
 import "./globals.css";
+import ScrollRevealInit from "@/components/ScrollRevealInit";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -40,7 +41,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${montserrat.variable} ${lato.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        <ScrollRevealInit />
+        {children}
+      </body>
     </html>
   );
 }

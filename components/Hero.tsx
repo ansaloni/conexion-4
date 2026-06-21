@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="bg-cinza py-16 md:py-[88px]" aria-labelledby="hero-title">
+    <section className="bg-cinza py-16 md:py-[120px]" aria-labelledby="hero-title">
       <div className="mx-auto grid max-w-wrap grid-cols-1 items-center gap-12 px-6 md:grid-cols-[1.1fr_0.9fr] md:gap-14">
         <div>
           <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-azul/[0.07] px-3.5 py-2 font-display text-xs font-bold uppercase tracking-wider text-azul">
@@ -26,7 +26,7 @@ export default function Hero() {
             <span className="text-vermelho">profissional</span> de verdade.
           </h1>
 
-          <p className="mt-5 max-w-[520px] text-lg text-[#4a4a4a]">
+          <p className="mt-5 max-w-[60ch] text-lg text-[#4a4a4a]">
             A Conexión Pro forma atendentes bilíngues através do Método C.O.N.E.X. —
             uma metodologia criada para quem atende clientes em espanhol todos os
             dias, não para quem só quer aprender o idioma.

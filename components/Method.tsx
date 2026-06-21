@@ -8,16 +8,16 @@ const steps = [
 
 export default function Method() {
   return (
-    <section id="metodo" className="bg-azul-deep py-24 text-white" aria-labelledby="method-title">
+    <section id="metodo" className="bg-azul-deep py-16 text-white md:py-[120px]" aria-labelledby="method-title">
       <div className="mx-auto max-w-wrap px-6">
-        <div className="mx-auto mb-16 max-w-xl text-center">
+        <div className="mx-auto mb-16 max-w-xl text-center" data-reveal>
           <span className="mb-3 block font-display text-xs font-bold uppercase tracking-wider text-amarelo">
             Nossa metodologia
           </span>
-          <h2 id="method-title" className="font-display text-[28px] font-bold md:text-[38px]">
+          <h2 id="method-title" className="font-display text-[28px] font-extrabold md:text-[38px]">
             Um sistema de comunicação, não um curso genérico
           </h2>
-          <p className="mt-4 text-[16.5px] text-white/70">
+          <p className="mt-4 max-w-[60ch] mx-auto text-[16.5px] text-white/70">
             O Método C.O.N.E.X. transforma qualquer interação em espanhol — mensagem,
             e-mail, ligação ou reunião — em cinco etapas conectadas.
           </p>
@@ -33,13 +33,18 @@ export default function Method() {
             aria-hidden="true"
           />
           <div className="relative grid grid-cols-1 gap-9 sm:grid-cols-2 md:grid-cols-5 md:gap-5">
-            {steps.map((s) => (
-              <div key={s.letter} className="flex flex-col items-start">
+            {steps.map((s, i) => (
+              <div
+                key={s.letter}
+                data-reveal
+                data-reveal-delay={String(i + 1) as "1" | "2" | "3" | "4" | "5"}
+                className="flex flex-col items-start"
+              >
                 <div className="mb-4 flex h-[68px] w-[68px] items-center justify-center rounded-full border-[5px] border-azul-deep bg-amarelo font-display text-[28px] font-extrabold text-azul-deep shadow-[0_0_0_2px_rgba(255,199,44,0.4)]">
                   {s.letter}
                 </div>
                 <h3 className="mb-2 font-display text-base font-bold text-white">{s.title}</h3>
-                <p className="text-[13.5px] text-white/65">{s.desc}</p>
+                <p className="max-w-[28ch] text-[13.5px] text-white/65">{s.desc}</p>
               </div>
             ))}
           </div>
